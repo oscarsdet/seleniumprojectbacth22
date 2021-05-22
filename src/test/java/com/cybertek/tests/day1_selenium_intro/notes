@@ -1,0 +1,155 @@
+May 5th, Wednesday
+
+If you didn't take quiz, please take it.
+
+- Yes. There is a typo in one of the options in the last question.
+- That answer will not be counted.
+
+---------------------------------------------------------------------------
+
+What is automation?
+	- If there is a repeating process, and we reduce or remove human interruption/interaction, we automate that process.
+
+How does automating tests help us?
+	- Precision
+	- Reduce mistakes
+	- More accurate
+	- Faster/Save time
+	- Save cost
+	- Auto-generated reports
+
+
+---------------------------------------------------------------------------
+
+- Maven project:
+	- Different than Java project.
+	- Maven is a built automation tool.
+	- Built : repeated steps when creating a project.
+		- such as creating folders, compiling, deploying, adding libraries(dependencies)
+	- Maven projects come with certain type of folder structure.
+		ex:
+				-src
+					-main
+					-test
+				-pom.xml
+
+	- pom.xml file is used to add/remove/manage dependencies (library)
+	- target folder: you need to run your code to see "target" folder
+		- maven project saves the results of compilation etc in the target folder
+
+
+
+----------------------------------------------------------------------
+
+ //1- setup the browser driver
+        WebDriverManager.chromedriver().setup();
+
+        //2- create instance of selenium web driver
+        // this line opens a browser
+        WebDriver driver = new ChromeDriver();
+
+        //3- get the page for Tesla.com
+        driver.get("https://www.tesla.com");
+
+#1- What is the method doing?
+#2- Does it accept any arguments?
+#3- Does it return anything? What is the return type?
+#4- Does it throw an exception?
+
+- .get method():
+	- This gets the given URL(link) in an already opened browser.
+
+	Does it accept any argument?
+	- This method accepts a STRING argument.
+
+	Does it return anything?
+	- void.
+
+- Thread.sleep():
+	- comes from java library
+	- it has nothing to do with SELENIUM
+	- basically stops the page for given duration in milli seconds
+
+	3000 milli seconds = 3 secs
+
+
+- basic navigations
+	- driver.navigate()
+	- driver.navigate().back() --> will take to the previous page
+	- driver.navigate().forward() --> will take to forward page
+	- driver.navigate().refresh() --> will refresh the page
+
+	- driver.navigate().to();
+		- .get() method and .navigate().to() method do exactly the same thing.
+		- the difference is .get() method will wait until the page is loaded before going to next step
+		- .to() method will NOT wait.
+		- Therefore we will not be using .navigate().to() method a lot.
+
+
+
+- .getTitle():
+	- What does it do?
+		- Goes in the <html> page
+		- finds <title> tag
+		- returns the title
+
+	- Does this accept any argument?
+		- No. It does not accept.
+
+	- What is the return type?
+		- String
+
+
+- driver.manage().window().maximize();
+	- Maximizes the browser page
+	- Helps selenium browser driver to see everthing on the page
+
+- driver.manage().window().fullscreen();
+	- does same/similar thing as .maximize() method
+	- but it will work for mac only, will not work in windows.
+
+
+- driver.close();
+	- will close the currenly focused page or tab
+
+
+- driver.quit();
+	- will close all of the opened browsers or tabs within the same session.
+	- will kill the current session completely.
+
+
+
+- What is a session?
+	- A driver session is created when we click run. And it ends when selenium code stops.
+	- Or when we say driver.quit
+
+
+MAC: command + space : will open "spotlight" --> type : terminal
+
+	in terminal, type: pkill -9 Google Chrome
+
+
+WINDOWS: go to command prompt:
+
+	taskkill /f /im chrome.exe
+
+
+Selenium WebDriver vs Browser Driver
+
+- Selenium WebDriver:
+	- Is actuallly the name of the tool
+	- Collection of libraries that allows us to automate browsers.
+
+- Browser Driver (is the translator)
+	- Browser driver does not come in the selenium library
+	- we need to set it up seperately.
+	- If we are using WebDriverManager (BoniGarcia) easily sets up our driver
+	- If we are NOT using WebDriverManager, we have to download our browser drivers seperately.
+
+
+
+
+Expected Value = will always come from documentation
+Actual Value = will always come from the browser
+
+Verification = we will compare 'expected' vs 'actual' values
