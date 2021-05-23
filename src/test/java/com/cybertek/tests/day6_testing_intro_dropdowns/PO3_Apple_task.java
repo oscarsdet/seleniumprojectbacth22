@@ -19,6 +19,7 @@ public class PO3_Apple_task {
 
         //2. Go to https://www.apple.com
         driver.get("https://www.apple.com");
+        // todo review
 
         //3. Click to all of the headers one by one
         //  apple Logo
