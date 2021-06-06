@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.util.concurrent.TimeUnit;
 
 public class PO_Checkbox_Practice {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args)  throws InterruptedException {
 
         //Practice: Cybertek Checkboxes
         WebDriver driver = WebDriverFactory.getDriver("chrome");
@@ -59,7 +59,12 @@ public class PO_Checkbox_Practice {
             System.out.println("Checkbox 2 is selected. Verification FAILED!!!");
         }
 
-        driver.close();
+        driver.navigate().refresh();
+        Thread.sleep(2000);
+        checkbox1 = driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
+        checkbox1.click();
+
+
 
     }
 }
